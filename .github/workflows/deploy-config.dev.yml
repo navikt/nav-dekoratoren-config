@@ -17,9 +17,14 @@ jobs:
           echo 'TS_CONFIG<<EOF' >> $GITHUB_ENV
           cat ./dev/ta-config.json >> $GITHUB_ENV
           echo 'EOF' >> $GITHUB_ENV
+      - name: Generate nais vars file
+        run: |
+          cat > .nais/vars.yml <<EOF
+          TS_CONFIG: $TS_CONFIG
+          EOF
       - uses: nais/deploy/actions/deploy@master
         env:
           CLUSTER: dev-gcp
           APIKEY: ${{ secrets.NAIS_DEPLOY_APIKEY }}
           RESOURCE: .nais/config-dev.yml
-          VAR: TS_CONFIG='${{ env.TS_CONFIG }}'
+          VARS: .nais/vars.yml
