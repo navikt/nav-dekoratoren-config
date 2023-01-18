@@ -20,7 +20,7 @@ jobs:
       - name: Generate nais vars file
         run: |
           cat > .nais/vars.yml <<EOF
-          TA_CONFIG: "$TA_CONFIG"
+          TA_CONFIG: "${{env.TA_CONFIG}}"
           EOF
           echo $(cat .nais/vars.yml)
       - uses: nais/deploy/actions/deploy@master
