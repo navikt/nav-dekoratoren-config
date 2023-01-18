@@ -9,5 +9,9 @@
       "https://www.nav.no/tilleggsstonader/nn",
       "https://www.nav.no/test"
     ]
+  },
+  {
+    "id": "03237",
+    "audience": ["privatperson", "samarbeidspartner"]
   }
 ]
