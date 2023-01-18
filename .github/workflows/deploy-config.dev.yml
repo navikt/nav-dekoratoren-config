@@ -23,6 +23,9 @@ jobs:
           find: "{{TA_CONFIG}}"
           replace: ${{env.TA_CONFIG}}
           include: ".nais/config-dev.yml"
+      - name: Print yml
+        run: |
+          echo $(cat .nais/config-dev.yml)
       - uses: nais/deploy/actions/deploy@master
         env:
           CLUSTER: dev-gcp
