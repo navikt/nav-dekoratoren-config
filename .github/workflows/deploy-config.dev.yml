@@ -22,4 +22,4 @@ jobs:
           CLUSTER: dev-gcp
           APIKEY: ${{ secrets.NAIS_DEPLOY_APIKEY }}
           RESOURCE: .nais/config-dev.yml
-          VAR: TS_CONFIG="${{ env.TS_CONFIG }}"
+          VAR: TS_CONFIG='${{ env.TS_CONFIG }}'
