@@ -8,5 +8,4 @@ metadata:
   annotations:
     reloader.stakater.com/match: "true"
 data:
-  ta-config.json: |
-    {{TA_CONFIG}}
+  ta-config.json: {{TA_CONFIG}}

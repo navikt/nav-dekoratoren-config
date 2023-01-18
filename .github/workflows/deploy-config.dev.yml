@@ -22,6 +22,7 @@ jobs:
           cat > .nais/vars.yml <<EOF
           TS_CONFIG: $TS_CONFIG
           EOF
+          echo $(cat .nais/vars.yml)
       - uses: nais/deploy/actions/deploy@master
         env:
           CLUSTER: dev-gcp
