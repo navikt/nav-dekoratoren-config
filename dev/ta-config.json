@@ -12,6 +12,6 @@
   },
   {
     "id": "03237",
-    "audience": ["privatperson", "samarbeidspartner"]
+    "audiences": ["privatperson", "samarbeidspartner"]
   }
 ]
