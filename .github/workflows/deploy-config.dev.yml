@@ -25,7 +25,7 @@ jobs:
           include: ".nais/config-dev.yml"
       - name: Print yml
         run: |
-          echo $(cat .nais/config-dev.yml)
+          echo "$(cat .nais/config-dev.yml)"
       - uses: nais/deploy/actions/deploy@master
         env:
           CLUSTER: dev-gcp
