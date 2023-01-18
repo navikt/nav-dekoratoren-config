@@ -4,6 +4,7 @@ on:
   push:
     paths:
       - .nais/config-dev.yml
+      - dev/**
 
 jobs:
   deploy:
@@ -14,7 +15,7 @@ jobs:
         uses: actions/checkout@v3
       - name: Set vars
         run: |
-          TS_CONFIG=$(cat ./dev/ta-config.json)
+          TS_CONFIG="$(cat ./dev/ta-config.json)"
           echo "TS_CONFIG=$TS_CONFIG" >> $GITHUB_ENV
       - uses: nais/deploy/actions/deploy@master
         env:
