@@ -2,16 +2,38 @@
   {
     "id": "03343",
     "urls": [
-      "https://www.nav.no/tilleggsstonader",
-      "https://www.nav.no/soknader/nb/person/familie/tilleggsstonader",
-      "https://www.nav.no/tilleggsstonader-enslig",
-      "https://www.nav.no/tilleggsstonader-gjenlevende",
-      "https://www.nav.no/tilleggsstonader/nn",
-      "https://www.nav.no/test"
+      {
+        "url": "https://www.nav.no/tilleggsstonader",
+        "match": "exact",
+        "exclude": true
+      },
+      {
+        "url": "https://www.nav.no/soknader/nb/person/familie/tilleggsstonader",
+        "match": "startsWith"
+      }
+    ],
+    "language": [
+      "no",
+      "en"
     ]
   },
   {
     "id": "03237",
-    "audiences": ["privatperson", "samarbeidspartner"]
+    "urls": [
+      {
+        "url": "https://www.dev.nav.no",
+        "match": "exact",
+        "exclude": true
+      },
+      {
+        "url": "https://www.dev.nav.no/soknader/nb/bedrift",
+        "match": "exact",
+        "exclude": true
+      }
+    ],
+    "audience": [
+      "privatperson",
+      "samarbeidspartner"
+    ]
   }
 ]

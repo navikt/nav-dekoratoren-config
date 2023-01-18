@@ -1,0 +1,66 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Task Analytics config",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": [
+      "id"
+    ],
+    "properties": {
+      "id": {
+        "description": "Survey id",
+        "type": "string"
+      },
+      "urls": {
+        "description": "Url'er som skal inkluderes eller ekskluderes",
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "url": {
+              "type": "string"
+            },
+            "match": {
+              "enum": [
+                "exact",
+                "startsWith"
+              ]
+            },
+            "exclude": {
+              "type": "boolean"
+            }
+          },
+          "required": [
+            "url",
+            "match"
+          ]
+        }
+      },
+      "audience": {
+        "type": "array",
+        "items": {
+          "enum": [
+            "privatperson",
+            "arbeidsgiver",
+            "samarbeidspartner"
+          ]
+        }
+      },
+      "language": {
+        "type": "array",
+        "items": {
+          "enum": [
+            "nb",
+            "nn",
+            "en",
+            "se",
+            "uk",
+            "ru",
+            "pl"
+          ]
+        }
+      }
+    }
+  }
+}
