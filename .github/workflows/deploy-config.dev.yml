@@ -15,7 +15,7 @@ jobs:
       - name: Set vars
         run: |
           echo 'TA_CONFIG<<EOF' >> $GITHUB_ENV
-          cat ./dev/ta-config.json >> $GITHUB_ENV
+          cat ./dev/ta-config.json | tr '\n' ' ' >> $GITHUB_ENV
           echo 'EOF' >> $GITHUB_ENV
       - name: Find and Replace
         uses: jacobtomlinson/gha-find-replace@v2
