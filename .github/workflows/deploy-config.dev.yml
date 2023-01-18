@@ -18,11 +18,11 @@ jobs:
           cat ./dev/ta-config.json >> $GITHUB_ENV
           echo 'EOF' >> $GITHUB_ENV
       - name: Find and Replace
-          uses: jacobtomlinson/gha-find-replace@v2
-          with:
-            find: "{{TA_CONFIG}}"
-            replace: ${{env.TA_CONFIG}}
-            include: ".nais/config-dev.yml"
+        uses: jacobtomlinson/gha-find-replace@v2
+        with:
+          find: "{{TA_CONFIG}}"
+          replace: ${{env.TA_CONFIG}}
+          include: ".nais/config-dev.yml"
       - uses: nais/deploy/actions/deploy@master
         env:
           CLUSTER: dev-gcp
