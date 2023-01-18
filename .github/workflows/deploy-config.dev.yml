@@ -2,9 +2,8 @@ name: Deploy dev configmap
 on:
   workflow_dispatch:
   push:
-    paths:
-      - .nais/config-dev.yml
-      - dev/**
+    branches:
+      - 'master'
 
 jobs:
   deploy:
@@ -13,9 +12,13 @@ jobs:
     steps:
       - name: Checkout repo
         uses: actions/checkout@v3
+      - name: Set vars
+        run: |
+          TS_CONFIG=toJSON($(cat ./dev/ta-config.json))
+          echo "TS_CONFIG=$TS_CONFIG" >> $GITHUB_ENV
       - uses: nais/deploy/actions/deploy@master
         env:
           CLUSTER: dev-gcp
           APIKEY: ${{ secrets.NAIS_DEPLOY_APIKEY }}
           RESOURCE: .nais/config-dev.yml
-          VARS: ./dev/ta-config.json
+          VAR: TS_CONFIG=${{ env.TS_CONFIG }}
