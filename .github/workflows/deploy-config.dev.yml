@@ -12,8 +12,12 @@ jobs:
     steps:
       - name: Checkout repo
         uses: actions/checkout@v3
+      - name: Set vars
+        run: |
+          echo "TS_CONFIG=$(cat ./dev/ta-config.json)" >> $GITHUB_ENV
       - uses: nais/deploy/actions/deploy@master
         env:
           CLUSTER: dev-gcp
           APIKEY: ${{ secrets.NAIS_DEPLOY_APIKEY }}
           RESOURCE: .nais/config-dev.yml
+          VAR: TS_CONFIG=${{ env.TS_CONFIG }}
