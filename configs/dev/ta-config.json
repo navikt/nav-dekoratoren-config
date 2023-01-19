@@ -27,7 +27,7 @@
       },
       {
         "url": "https://www.dev.nav.no/soknader/nb/bedrift",
-        "match": "exact",
+        "match": "startsWith",
         "exclude": true
       }
     ],

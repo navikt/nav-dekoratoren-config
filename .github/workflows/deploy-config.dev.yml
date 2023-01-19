@@ -12,9 +12,15 @@ jobs:
     steps:
       - name: Checkout repo
         uses: actions/checkout@v3
+      - name: Validate JSON
+        uses: walbo/validate-json@v1.1.0
+        with:
+          files: configs/dev/ta-config.json
+          schema: schemas/ta-config.schema.json
+          fail-on-missing-schema: true
       - name: Set vars
         run: |
-          echo TA_CONFIG=$(cat ./dev/ta-config.json | tr '\n' ' ') >> $GITHUB_ENV
+          echo TA_CONFIG=$(cat ./configs/dev/ta-config.json | tr '\n' ' ') >> $GITHUB_ENV
       - name: Find and Replace
         uses: jacobtomlinson/gha-find-replace@v2
         with:
