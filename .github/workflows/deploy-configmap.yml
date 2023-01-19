@@ -23,7 +23,6 @@ jobs:
           schema: schemas/ta-config.schema.json
           fail-on-missing-schema: true
           schema-version: draft-07
-          strict: false
       - name: Read json files
         run: |
           echo TA_CONFIG=$(cat ./configs/${{ inputs.env }}/ta-config.json | tr '\n' ' ') >> $GITHUB_ENV

@@ -70,7 +70,7 @@ Eksempel:
 ]
 ```
 
-Undersøkelsen "12345" vises på alle sider under `https://www.nav.no/foo`, bortsett fra sider under `https://www.nav.no/foo/bar`.
+Undersøkelsen "12345" vises på alle sider under `https://www.nav.no/foo`, med unntak av sider under `https://www.nav.no/foo/bar`.
 Undersøkelsen "67890" vises på alle bokmål og nynorsk sider for privatpersoner, med unntak av forsiden. 
 
 ## Henvendelser
