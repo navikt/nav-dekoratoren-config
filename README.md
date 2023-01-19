@@ -34,7 +34,7 @@ En undersøkelse legges inn på dette formatet. Se også [JSON schema](https://g
   
   // (Valgfri) Liste over språk undersøkelsen skal vises for (valgfri). Hvis denne ikke er
   // satt, vises den for alle språk
-  language?: Array<"nb" | "nn" |"en" | "se" | "uk" | "ru" | "pl">
+  language?: Array<"nb" | "nn" | "en" | "se" | "uk" | "ru" | "pl">
 }
 ```
 
