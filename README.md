@@ -71,8 +71,9 @@ Eksempel:
 ```
 
 Undersøkelsen "12345" vises på alle sider under `https://www.nav.no/foo`, med unntak av sider under `https://www.nav.no/foo/bar`. <br/>
-<br/>
-Undersøkelsen "67890" vises på alle bokmål og nynorsk sider for privatpersoner, med unntak av forsiden. 
+Undersøkelsen "67890" vises på alle bokmål og nynorsk sider for privatpersoner, med unntak av forsiden.
+
+Dersom flere undersøkelser matcher på samme side, vil den første i lista vises. Mulighet for å sette flere undersøkelser på samme side, med prosentandels utvalg kommer snart!
 
 ## Henvendelser
 
