@@ -9,7 +9,7 @@
     ],
     "properties": {
       "id": {
-        "description": "Survey id",
+        "description": "Id for undersøkelsen",
         "type": "string"
       },
       "urls": {
@@ -38,6 +38,7 @@
         }
       },
       "audience": {
+        "description": "Målgrupper",
         "type": "array",
         "items": {
           "enum": [
@@ -48,6 +49,7 @@
         }
       },
       "language": {
+        "description": "Språk",
         "type": "array",
         "items": {
           "enum": [
