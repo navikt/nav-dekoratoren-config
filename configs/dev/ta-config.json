@@ -17,14 +17,5 @@
       "privatperson",
       "samarbeidspartner"
     ]
-  },
-  {
-    "id": "1234",
-    "urls": [
-      {
-        "url": "https://www.dev.nav.no/alene-med-barn",
-        "match": "exact"
-      }
-    ]
   }
 ]
