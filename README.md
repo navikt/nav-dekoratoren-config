@@ -16,22 +16,25 @@ En undersøkelse legges inn på dette formatet. Se også [JSON schema](https://g
 ```
 {
   // (Påkrevd) Survey-id fra Task Analytics
-  id: string,
+  id: string
   
-  // (Valgfri) Liste over url'er som undersøkelsen skal vises på. Hvis denne ikke er satt, vises den på alle sider
+  // (Valgfri) Liste over url'er som undersøkelsen skal vises/ikke vises på. Hvis denne ikke
+  // er satt, vises den på alle sider
   urls?: Array<
     {
       url: string,    // Url (påkrevd)
       match: "exact" | "startsWith",  // Logikk for sammenligning (påkrevd)
       exclude: boolean    // Ekskluder denne url'en (valgfri, default er false)
     }
-  >,
+  >
   
-  // (Valgfri) Liste over målgrupper undersøkelsen skal vises for. Hvis denne ikke er satt, vises den for alle målgrupper
-  "audience"?: Array<"privatperson" | "arbeidsgiver" | "samarbeidspartner">
+  // (Valgfri) Liste over målgrupper undersøkelsen skal vises for. Hvis denne ikke er satt,
+  // vises den for alle målgrupper
+  audience?: Array<"privatperson" | "arbeidsgiver" | "samarbeidspartner">
   
-  // (Valgfri) Liste over språk undersøkelsen skal vises for (valgfri). Hvis denne ikke er satt, vises den for alle språk
-  "language"?: Array<"nb" | "nn" |"en" | "se" | "uk" | "ru" | "pl">
+  // (Valgfri) Liste over språk undersøkelsen skal vises for (valgfri). Hvis denne ikke er
+  // satt, vises den for alle språk
+  language?: Array<"nb" | "nn" |"en" | "se" | "uk" | "ru" | "pl">
 }
 ```
 
