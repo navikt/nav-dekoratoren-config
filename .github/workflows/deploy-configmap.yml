@@ -3,13 +3,8 @@ on:
   workflow_call:
     inputs:
       env:
-        type: choice
         required: true
-        description: 'Nais environment'
-        default: 'prod'
-        options:
-          - dev
-          - prod
+        type: string
 
 jobs:
   deploy:
