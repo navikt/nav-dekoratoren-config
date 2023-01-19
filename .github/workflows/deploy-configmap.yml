@@ -1,10 +1,13 @@
-name: Deploy configmap to nais
+name: Deploy to nais
 on:
   workflow_call:
     inputs:
       env:
         required: true
         type: string
+    secrets:
+      NAIS_DEPLOY_APIKEY:
+        required: true
 
 jobs:
   deploy:
