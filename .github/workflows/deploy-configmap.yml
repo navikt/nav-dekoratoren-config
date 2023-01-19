@@ -16,7 +16,7 @@ jobs:
     steps:
       - name: Checkout repo
         uses: actions/checkout@v3
-      - name: Validate TS config
+      - name: Validate Task Analytics config
         uses: walbo/validate-json@v1.1.0
         with:
           files: configs/${{ inputs.env }}/ta-config.json
@@ -24,18 +24,15 @@ jobs:
           fail-on-missing-schema: true
           schema-version: draft-07
           strict: false
-      - name: Set vars
+      - name: Read json files
         run: |
           echo TA_CONFIG=$(cat ./configs/${{ inputs.env }}/ta-config.json | tr '\n' ' ') >> $GITHUB_ENV
-      - name: Find and Replace
+      - name: Inject json into nais-config
         uses: jacobtomlinson/gha-find-replace@v2
         with:
           find: "{{TA_CONFIG}}"
           replace: ${{env.TA_CONFIG}}
           include: ".nais/config.yml"
-      - name: Print yml
-        run: |
-          echo "$(cat .nais/config.yml)"
       - uses: nais/deploy/actions/deploy@master
         env:
           CLUSTER: ${{ inputs.env }}-gcp

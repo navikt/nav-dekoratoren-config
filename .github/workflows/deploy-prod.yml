@@ -1,0 +1,17 @@
+name: Deploy to prod
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - master
+    paths:
+      - configs/prod/**/*.json
+
+jobs:
+  deploy:
+    name: Deploy prod configmap
+    uses: ./.github/workflows/deploy-configmap.yml
+    with:
+      env: prod
+    secrets:
+      NAIS_DEPLOY_APIKEY: ${{ secrets.NAIS_DEPLOY_APIKEY }}
