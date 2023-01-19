@@ -6,7 +6,7 @@ Konfigurasjon for [nav-dekoratoren](https://github.com/navikt/nav-dekoratoren). 
 ## Fremgangsmåte for endringer
 Endringer på config-filer valideres og deployes ved push til master. Sjekk [deploy actions](https://github.com/navikt/nav-dekoratoren-config/actions) for eventuelle valideringsfeil.
 
-Endringene vil normalt være aktive i dekoratøren etter 1-2 minutter.
+Endringene vil normalt være aktive i dekoratøren i løpet av ett minutt.
 
 ### Task Analytics undersøkelser
 **Prod: [/configs/prod/ta-config.json](https://github.com/navikt/nav-dekoratoren-config/blob/master/configs/prod/ta-config.json)** <br/>
