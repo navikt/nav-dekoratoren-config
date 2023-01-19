@@ -1,15 +1,19 @@
-name: Deploy dev configmap
+name: Deploy configmap to nais
 on:
-  workflow_dispatch:
-  push:
-    branches:
-      - master
-    paths:
-      - configs/dev/**/*.json
+  workflow_call:
+    inputs:
+      env:
+        type: choice
+        required: true
+        description: 'Nais environment'
+        default: 'prod'
+        options:
+          - dev
+          - prod
 
 jobs:
   deploy:
-    name: Deploy dev configmap
+    name: Deploy configmap
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repo
@@ -17,25 +21,25 @@ jobs:
       - name: Validate TS config
         uses: walbo/validate-json@v1.1.0
         with:
-          files: configs/dev/ta-config.json
+          files: configs/${{ inputs.env }}/ta-config.json
           schema: schemas/ta-config.schema.json
           fail-on-missing-schema: true
           schema-version: draft-07
           strict: false
       - name: Set vars
         run: |
-          echo TA_CONFIG=$(cat ./configs/dev/ta-config.json | tr '\n' ' ') >> $GITHUB_ENV
+          echo TA_CONFIG=$(cat ./configs/${{ inputs.env }}/ta-config.json | tr '\n' ' ') >> $GITHUB_ENV
       - name: Find and Replace
         uses: jacobtomlinson/gha-find-replace@v2
         with:
           find: "{{TA_CONFIG}}"
           replace: ${{env.TA_CONFIG}}
-          include: ".nais/config-dev.yml"
+          include: ".nais/config.yml"
       - name: Print yml
         run: |
-          echo "$(cat .nais/config-dev.yml)"
+          echo "$(cat .nais/config.yml)"
       - uses: nais/deploy/actions/deploy@master
         env:
-          CLUSTER: dev-gcp
+          CLUSTER: ${{ inputs.env }}-gcp
           APIKEY: ${{ secrets.NAIS_DEPLOY_APIKEY }}
-          RESOURCE: .nais/config-dev.yml
+          RESOURCE: .nais/config.yml

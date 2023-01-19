@@ -1,23 +1,5 @@
 [
   {
-    "id": "03343",
-    "urls": [
-      {
-        "url": "https://www.nav.no/tilleggsstonader",
-        "match": "exact",
-        "exclude": true
-      },
-      {
-        "url": "https://www.nav.no/soknader/nb/person/familie/tilleggsstonader",
-        "match": "startsWith"
-      }
-    ],
-    "language": [
-      "nb",
-      "en"
-    ]
-  },
-  {
     "id": "03237",
     "urls": [
       {

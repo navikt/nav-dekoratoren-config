@@ -1,0 +1,17 @@
+name: Deploy to dev
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - master
+    paths:
+      - configs/dev/**/*.json
+
+jobs:
+  deploy:
+    name: Deploy dev configmap
+    uses: ./.github/workflows/deploy-configmap.yml
+    with:
+      env: dev
+    secrets:
+      NAIS_DEPLOY_APIKEY: ${{ secrets.NAIS_DEPLOY_APIKEY }}
