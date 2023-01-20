@@ -19,7 +19,7 @@ En undersøkelse legges inn på dette formatet. Se også [JSON schema](https://g
   id: string
   
   // (Valgfri) Liste over url'er som undersøkelsen skal vises/ikke vises på. Hvis denne ikke
-  // er satt, vises den på alle sider
+  // er satt, vises undersøkelsen på alle sider
   urls?: Array<
     {
       url: string,    // Url (påkrevd)
@@ -28,12 +28,12 @@ En undersøkelse legges inn på dette formatet. Se også [JSON schema](https://g
     }
   >
   
-  // (Valgfri) Liste over målgrupper undersøkelsen skal vises for. Hvis denne ikke er satt,
-  // vises den for alle målgrupper
+  // (Valgfri) Liste over målgrupper undersøkelsen skal vises for. Hvis denn ikke er satt,
+  // vises undersøkelsen for alle målgrupper
   audience?: Array<"privatperson" | "arbeidsgiver" | "samarbeidspartner">
   
   // (Valgfri) Liste over språk undersøkelsen skal vises for. Hvis denne ikke er satt,
-  // vises den for alle språk
+  // vises undersøkelsen for alle språk
   language?: Array<"nb" | "nn" | "en" | "se" | "uk" | "ru" | "pl">
 }
 ```
