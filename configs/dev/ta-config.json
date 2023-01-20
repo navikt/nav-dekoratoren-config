@@ -17,5 +17,9 @@
       "privatperson",
       "samarbeidspartner"
     ]
+  },
+  {
+    "id": "test invalid",
+    "urls": "hei"
   }
 ]
