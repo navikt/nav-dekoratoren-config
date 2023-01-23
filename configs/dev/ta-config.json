@@ -22,19 +22,19 @@
     "id": "03340",
     "urls": [
       {
-        "url": "https://www.nav.no/no/bedrift",
+        "url": "https://www.dev.nav.no/no/bedrift",
         "match": "startsWith"
       },
       {
-        "url": "https://www.nav.no/arbeidsgiver",
+        "url": "https://www.dev.nav.no/arbeidsgiver",
         "match": "startsWith"
       },
       {
-        "url": "https://arbeidsgiver.nav.no",
+        "url": "https://arbeidsgiver.dev.nav.no",
         "match": "startsWith"
       },
       {
-        "url": "https://www.nav.no/soknader/nb/bedrift",
+        "url": "https://www.dev.nav.no/soknader/nb/bedrift",
         "match": "startsWith"
       }
     ]
