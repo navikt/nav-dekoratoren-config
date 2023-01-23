@@ -17,5 +17,26 @@
       "privatperson",
       "samarbeidspartner"
     ]
+  },
+  {
+    "id": "03340",
+    "urls": [
+      {
+        "url": "https://www.nav.no/no/bedrift",
+        "match": "startsWith"
+      },
+      {
+        "url": "https://www.nav.no/arbeidsgiver",
+        "match": "startsWith"
+      },
+      {
+        "url": "https://arbeidsgiver.nav.no",
+        "match": "startsWith"
+      },
+      {
+        "url": "https://www.nav.no/soknader/nb/bedrift",
+        "match": "startsWith"
+      }
+    ]
   }
 ]
