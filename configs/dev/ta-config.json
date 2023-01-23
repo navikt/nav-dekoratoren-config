@@ -1,24 +1,5 @@
 [
   {
-    "id": "03237",
-    "urls": [
-      {
-        "url": "https://www.dev.nav.no",
-        "match": "exact",
-        "exclude": true
-      },
-      {
-        "url": "https://www.dev.nav.no/soknader/nb/bedrift",
-        "match": "startsWith",
-        "exclude": true
-      }
-    ],
-    "audience": [
-      "privatperson",
-      "samarbeidspartner"
-    ]
-  },
-  {
     "id": "03340",
     "urls": [
       {
