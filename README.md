@@ -75,6 +75,8 @@ Undersøkelsen "67890" vises på alle bokmål og nynorsk sider for privatpersone
 
 Dersom flere undersøkelser matcher på samme side, vil den første i lista vises. Mulighet for å sette flere undersøkelser på samme side, med prosentandels utvalg kommer snart!
 
+Obs: Undersøkelser vises aldri på sider som benytter simple header!
+
 ## Henvendelser
 
 Spørsmål knyttet til prosjektet kan rettes mot https://github.com/orgs/navikt/teams/personbruker
