@@ -24,22 +24,22 @@
     "id": "03237",
     "urls": [
       {
-        "url": "https://www.nav.no/",
+        "url": "https://www.dev.nav.no/",
         "match": "exact",
         "exclude": true
       },
       {
-        "url": "https://www.nav.no/no/bedrift",
+        "url": "https://www.dev.nav.no/no/bedrift",
         "match": "startsWith",
         "exclude": true
       },
       {
-        "url": "http://www.nav.no/arbeidsgiver",
+        "url": "http://www.dev.nav.no/arbeidsgiver",
         "match": "startsWith",
         "exclude": true
       },
       {
-        "url": "http://www.nav.no/soknader/nb/bedrift",
+        "url": "http://www.dev.nav.no/soknader/nb/bedrift",
         "match": "startsWith",
         "exclude": true
       },
