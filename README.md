@@ -91,8 +91,8 @@ Undersøkelsen "31337" har 10% sannsynlighet for å vises på forsiden. <br/>
 
 #### Utvalg av undersøkelser
 Det trekkes ut (opptil) en tilfeldig undersøkelse, basert på `selection`-verdien til undersøkelser som matcher for en side. Når en undersøkelse har vært med
-i en trekning, vil vi ikke forsøke å vise denne undersøkelsen igjen til samme bruker neste 30 dager (lagres med cookies). Dersom en undersøkelse blir valgt,
-vises _ingen_ nye undersøkelser for denne brukeren neste 30 dager.
+i en trekning, vil vi ikke forsøke å trekke denne undersøkelsen igjen til samme bruker neste 30 dager (lagres med cookies). Dersom en undersøkelse blir valgt,
+vises kun den valgte undersøkelsen for denne brukeren neste 30 dager.
 
 Dersom summen av selection-verdiene er <100, trekkes et tall mellom 0-100 som avgjør hvilken undersøkelse som vises. Eksempel:
 ```json
@@ -110,7 +110,7 @@ Dersom summen av selection-verdiene er <100, trekkes et tall mellom 0-100 som av
 Her er sannsynligheten 5% for "123", 10% for "456" og 85% for ingen undersøkelse vist, gitt at ingen av disse har vært med i en trekning for brukeren
 siste 30 dager.
 
-Dersom summen av selection-verdiene er >100, trekkes et tall mellom 0-(sum av verdiene) som avgjør hvilken undersøkelse som vises. Eksempel:
+Dersom summen av selection-verdiene er >100, trekkes et tall mellom 0-(sum av verdiene), som avgjør hvilken undersøkelse som vises. Eksempel:
 ```json
 [
   {
