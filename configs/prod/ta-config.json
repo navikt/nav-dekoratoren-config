@@ -32,5 +32,6 @@
         "match": "startsWith"
       }
     ]
-  }
+  },
+  { "id": "03237", "selection": 100, "urls": [{ "url": "https://www.nav.no/dekoratoren", "match": "startsWith" }] }
 ]
