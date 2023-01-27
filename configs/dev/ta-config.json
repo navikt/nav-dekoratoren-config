@@ -1,23 +1,57 @@
 [
   {
+    "id": "03340",
+    "urls": [
+      {
+        "url": "https://www.dev.nav.no/no/bedrift",
+        "match": "startsWith"
+      },
+      {
+        "url": "https://www.dev.nav.no/arbeidsgiver",
+        "match": "startsWith"
+      },
+      {
+        "url": "https://arbeidsgiver.dev.nav.no",
+        "match": "startsWith"
+      },
+      {
+        "url": "https://www.dev.nav.no/soknader/nb/bedrift",
+        "match": "startsWith"
+      }
+    ]
+  },
+  {
     "id": "03237",
     "selection": 25,
     "urls": [
       {
-        "url": "https://www.dev.nav.no",
+        "url": "https://www.dev.nav.no/",
         "match": "exact",
         "exclude": true
       },
       {
-        "url": "https://www.dev.nav.no/soknader/nb/bedrift",
+        "url": "https://www.dev.nav.no/no/bedrift",
+        "match": "startsWith",
+        "exclude": true
+      },
+      {
+        "url": "http://www.dev.nav.no/arbeidsgiver",
+        "match": "startsWith",
+        "exclude": true
+      },
+      {
+        "url": "http://www.dev.nav.no/soknader/nb/bedrift",
+        "match": "startsWith",
+        "exclude": true
+      },
+      {
+        "url": "http://arbeidsgiver.nav.no",
         "match": "startsWith",
         "exclude": true
       }
     ],
-    "audience": [
-      "privatperson",
-      "samarbeidspartner"
-    ]
+    "audience": ["privatperson", "samarbeidspartner"],
+    "language": ["nb", "nn"]
   },
   {
     "id": "1234",

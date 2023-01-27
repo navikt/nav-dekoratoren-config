@@ -13,6 +13,8 @@ Endringene vil normalt være aktive i dekoratøren i løpet av ett minutt.
 **Dev: [/configs/dev/ta-config.json](https://github.com/navikt/nav-dekoratoren-config/blob/master/configs/dev/ta-config.json)**
 
 En undersøkelse legges inn på dette formatet. Se også [JSON schema](https://github.com/navikt/nav-dekoratoren-config/blob/master/schemas/ta-config.schema.json).
+
+Obs: Undersøkelser vises aldri på sider som benytter simple header!
 ```
 {
   // (Påkrevd) Survey-id fra Task Analytics
