@@ -12,6 +12,12 @@
         "description": "Id for undersøkelsen",
         "type": "string"
       },
+      "selection": {
+        "description": "Prosentandels utvalg for undersøkelsen",
+        "type": "number",
+        "minimum": 0,
+        "maximum": 100
+      },
       "urls": {
         "description": "Url'er som skal inkluderes eller ekskluderes",
         "type": "array",

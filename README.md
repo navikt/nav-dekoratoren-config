@@ -18,6 +18,9 @@ En undersøkelse legges inn på dette formatet. Se også [JSON schema](https://g
   // (Påkrevd) Survey-id fra Task Analytics
   id: string
   
+  // (Valgfri) Prosentandel av besøkende som skal få undersøkelsen (0-100). Default er 100
+  selection?: number
+  
   // (Valgfri) Liste over url'er som undersøkelsen skal vises/ikke vises på. Hvis denne ikke
   // er satt, vises undersøkelsen på alle sider
   urls?: Array<
@@ -38,7 +41,7 @@ En undersøkelse legges inn på dette formatet. Se også [JSON schema](https://g
 }
 ```
 
-Eksempel:
+#### Eksempel
 ```json
 [
   {
@@ -66,15 +69,60 @@ Eksempel:
     ],
     "audience": ["privatperson"],
     "language": ["nb", "nn"]
+  },
+  {
+    "id": "31337",
+    "selection": 10,
+    "urls": [
+      {
+        "url": "https://www.nav.no",
+        "match": "exact"
+      }
+    ]
   }
 ]
 ```
 
 Undersøkelsen "12345" vises på alle sider under `https://www.nav.no/foo`, med unntak av sider under `https://www.nav.no/foo/bar`. <br/>
-Undersøkelsen "67890" vises på alle bokmål og nynorsk sider for privatpersoner, med unntak av forsiden.
+Undersøkelsen "67890" vises på alle bokmål og nynorsk sider for privatpersoner, med unntak av forsiden. <br/>
+Undersøkelsen "31337" har 10% sannsynlighet for å vises på forsiden. <br/>
 
-Dersom flere undersøkelser matcher på samme side, vil den første i lista vises. Mulighet for å sette flere undersøkelser på samme side, med prosentandels utvalg kommer snart!
+#### Utvalg av undersøkelser
+Det trekkes ut (opptil) en tilfeldig undersøkelse, basert på `selection`-verdien til undersøkelser som matcher for en side. Når en undersøkelse har vært med
+i en trekning, vil vi ikke forsøke å vise denne undersøkelsen igjen til samme bruker neste 30 dager (lagres med cookies). Dersom en undersøkelse blir valgt,
+vises _ingen_ nye undersøkelser for denne brukeren neste 30 dager.
 
+Dersom summen av selection-verdiene er <100, trekkes et tall mellom 0-100 som avgjør hvilken undersøkelse som vises. Eksempel:
+```json
+[
+  {
+    "id": "123",
+    "selection": 5
+  },
+  {
+    "id": "456",
+    "selection": 10
+  }
+]
+```
+Her er sannsynligheten 5% for "123", 10% for "456" og 85% for ingen undersøkelse vist, gitt at ingen av disse har vært med i en trekning for brukeren
+siste 30 dager.
+
+Dersom summen av selection-verdiene er >100, trekkes et tall mellom 0-(sum av verdiene) som avgjør hvilken undersøkelse som vises. Eksempel:
+```json
+[
+  {
+    "id": "123",
+    "selection": 50
+  },
+  {
+    "id": "456",
+    "selection": 75
+  }
+]
+```
+Her er sannsynligheten 40% for "123" og 60% for "456", gitt at ingen av disse har vært med i en trekning for brukeren siste 30 dager.
+ 
 ## Henvendelser
 
 Spørsmål knyttet til prosjektet kan rettes mot https://github.com/orgs/navikt/teams/personbruker

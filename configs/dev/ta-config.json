@@ -1,6 +1,7 @@
 [
   {
     "id": "03237",
+    "selection": 25,
     "urls": [
       {
         "url": "https://www.dev.nav.no",
@@ -17,5 +18,13 @@
       "privatperson",
       "samarbeidspartner"
     ]
+  },
+  {
+    "id": "1234",
+    "selection": 25
+  },
+  {
+    "id": "5678",
+    "selection": 10
   }
 ]
