@@ -6,15 +6,13 @@ Konfigurasjon for [nav-dekoratoren](https://github.com/navikt/nav-dekoratoren). 
 ## Fremgangsmåte for endringer
 Endringer på config-filer valideres og deployes ved push til master. Sjekk [deploy actions](https://github.com/navikt/nav-dekoratoren-config/actions) for eventuelle valideringsfeil.
 
-Endringene vil normalt være aktive i dekoratøren i løpet av ett minutt.
+Endringer vil normalt være aktive i dekoratøren i løpet av ett minutt.
 
 ### Task Analytics undersøkelser
 **Prod: [/configs/prod/ta-config.json](https://github.com/navikt/nav-dekoratoren-config/blob/master/configs/prod/ta-config.json)** <br/>
 **Dev: [/configs/dev/ta-config.json](https://github.com/navikt/nav-dekoratoren-config/blob/master/configs/dev/ta-config.json)**
 
 En undersøkelse legges inn på dette formatet. Se også [JSON schema](https://github.com/navikt/nav-dekoratoren-config/blob/master/schemas/ta-config.schema.json).
-
-Obs: Undersøkelser vises aldri på sider som benytter simple header!
 ```typescript
 type TaConfig = Array<{
   // (Påkrevd) Survey-id fra Task Analytics
@@ -23,17 +21,17 @@ type TaConfig = Array<{
   // (Valgfri) Prosentandel av besøkende som skal få undersøkelsen (0-100). Default er 100
   selection?: number
   
-  // (Valgfri) Tidsrom der undersøkelsen skal være tilgjengelig. Start/end må være strings
-  // som JS kan parse til et Date-objekt, f.eks. "2023-12-24" eller "2024-01-01T12:00".
-  // Default er ingen tidsbegrensning. Bruker norsk tidssone. Start/end er exclusive med
-  // millisec presisjon
+  // (Valgfri) Tidsrom der undersøkelsen skal kunne vises. Default er ingen tidsbegrensning.
+  // Start/end må være date-time strings som kan parses av Javascript, og er exclusive med millisec presisjon.
+  // Benytter norsk tidssone. 
   duration?: {
     start?: string,
     end?: string,
   }
   
-  // (Valgfri) Liste over url'er som undersøkelsen skal vises/ikke vises på. Hvis denne ikke
-  // er satt, vises undersøkelsen på alle sider
+  // (Valgfri) Liste over url'er som undersøkelsen skal kunne vises på, eller ekskluderes fra.
+  // Som default vises undersøkelsen på alle sider. Dersom alle url'er har satt exclude=true,
+  // vises undersøkelsen på alle sider unntatt disse.
   urls?: Array<
     {
       // Url (påkrevd)
@@ -45,12 +43,12 @@ type TaConfig = Array<{
     }
   >
   
-  // (Valgfri) Liste over målgrupper undersøkelsen skal vises for. Hvis denn ikke er satt,
-  // vises undersøkelsen for alle målgrupper
+  // (Valgfri) Liste over målgrupper som undersøkelsen skal vises for.
+  // Som default vises undersøkelsen for alle målgrupper.
   audience?: Array<"privatperson" | "arbeidsgiver" | "samarbeidspartner">
   
-  // (Valgfri) Liste over språk undersøkelsen skal vises for. Hvis denne ikke er satt,
-  // vises undersøkelsen for alle språk
+  // (Valgfri) Liste over språk som undersøkelsen skal vises for.
+  // Som default vises undersøkelsen for samtlige språk.
   language?: Array<"nb" | "nn" | "en" | "se" | "uk" | "ru" | "pl">
 }>
 ```
@@ -115,13 +113,15 @@ type TaConfig = Array<{
 
 Undersøkelsen "12345" vises på alle sider under `https://www.nav.no/foo`, med unntak av sider under `https://www.nav.no/foo/bar`. <br/>
 Undersøkelsen "67890" vises på alle bokmål og nynorsk sider for privatpersoner, med unntak av forsiden. <br/>
-Undersøkelsen "31337" har 10% sannsynlighet for å vises på forsiden fra 1/1/2023. <br/>
-Undersøkelsen "2357" vises på sider under nav.no/soknader fra 30/1/2023 kl 8:00, til 28/2/2023 kl 0:00. <br/>
+Undersøkelsen "31337" vises for 10% av besøkende på forsiden, fra 1/1/2023. <br/>
+Undersøkelsen "2357" vises på sider under nav.no/soknader fra 30/1/2023 kl. 8:00, til 28/2/2023 kl. 0:00. <br/>
 
-#### Utvalg av undersøkelser
-Det trekkes ut (opptil) en tilfeldig undersøkelse, basert på `selection`-verdien til undersøkelser som matcher for en side. Når en undersøkelse har vært med
-i en trekning, vil vi ikke forsøke å trekke denne undersøkelsen igjen til samme bruker neste 30 dager (lagres med cookies). Dersom en undersøkelse blir valgt,
-vises kun den valgte undersøkelsen for denne brukeren neste 30 dager.
+Obs: Undersøkelser vises aldri på sider som benytter simple header!
+
+#### Utvelging av undersøkelser
+Det trekkes ut (inntil) en tilfeldig undersøkelse, basert på `selection`-verdien til undersøkelser som matcher for en side. Når en undersøkelse har vært med
+i en trekning, vil vi ikke forsøke å trekke denne undersøkelsen igjen til samme bruker neste 30 dager. Dersom en undersøkelse blir valgt for en bruker,
+vil vi kun vise denne undersøkelsen for den aktuelle brukeren neste 30 dager. Trekninger huskes med cookies.
 
 Dersom summen av selection-verdiene er <100, trekkes et tall mellom 0-100 som avgjør hvilken undersøkelse som vises. Eksempel:
 ```json
