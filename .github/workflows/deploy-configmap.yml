@@ -16,9 +16,10 @@ jobs:
     steps:
       - name: Checkout repo
         uses: actions/checkout@v3
+      - name: Install validator
+        run: npm ci
       - name: Validate Task Analytics config
-        run: |
-          npm run validate-${{ inputs.env }}
+        run: npm run validate-${{ inputs.env }}
       - name: Read json files
         run: |
           echo TA_CONFIG=$(cat ./configs/${{ inputs.env }}/ta-config.json | tr '\n' ' ') >> $GITHUB_ENV
