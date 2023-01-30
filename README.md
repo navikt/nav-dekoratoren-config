@@ -23,7 +23,7 @@ type TaConfig = Array<{
   // (Valgfri) Prosentandel av besøkende som skal få undersøkelsen (0-100). Default er 100
   selection?: number
   
-  // (Valgfri) Tidsrom der undersøkelsen skal være tilgjengelig. Start og/eller end må være
+  // (Valgfri) Tidsrom der undersøkelsen skal være tilgjengelig. Start/end må være
   // strings som JS kan parse til et Date-objekt, f.eks. "2023-12-24" eller "2024-01-01T12:00"
   duration?: {
     start?: string,
