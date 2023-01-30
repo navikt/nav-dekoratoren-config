@@ -1,6 +1,10 @@
 const fs = require("fs");
 const { Validator } = require("jsonschema");
 
+Validator.prototype.customFormats["datetime"] = (input) => {
+  return !isNaN(Date.parse(input));
+};
+
 const validator = new Validator();
 
 const fileOptions = {

@@ -4,9 +4,7 @@
   "type": "array",
   "items": {
     "type": "object",
-    "required": [
-      "id"
-    ],
+    "required": ["id"],
     "properties": {
       "id": {
         "description": "Id for undersøkelsen",
@@ -23,12 +21,14 @@
         "type": "object",
         "properties": {
           "start": {
+            "description": "Start tidspunkt",
             "type": "string",
-            "format": "date-time"
+            "format": "datetime"
           },
           "end": {
+            "description": "Slutt tidspunkt",
             "type": "string",
-            "format": "date-time"
+            "format": "datetime"
           }
         }
       },
@@ -42,45 +42,27 @@
               "type": "string"
             },
             "match": {
-              "enum": [
-                "exact",
-                "startsWith"
-              ]
+              "enum": ["exact", "startsWith"]
             },
             "exclude": {
               "type": "boolean"
             }
           },
-          "required": [
-            "url",
-            "match"
-          ]
+          "required": ["url", "match"]
         }
       },
       "audience": {
         "description": "Målgrupper",
         "type": "array",
         "items": {
-          "enum": [
-            "privatperson",
-            "arbeidsgiver",
-            "samarbeidspartner"
-          ]
+          "enum": ["privatperson", "arbeidsgiver", "samarbeidspartner"]
         }
       },
       "language": {
         "description": "Språk",
         "type": "array",
         "items": {
-          "enum": [
-            "nb",
-            "nn",
-            "en",
-            "se",
-            "uk",
-            "ru",
-            "pl"
-          ]
+          "enum": ["nb", "nn", "en", "se", "uk", "ru", "pl"]
         }
       }
     }
