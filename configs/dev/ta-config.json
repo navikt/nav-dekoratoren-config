@@ -60,7 +60,7 @@
     },
     "urls": [
       {
-        "url": "https://www.nav.no/soknader",
+        "url": "https://www.dev.nav.no/soknader",
         "match": "startsWith"
       }
     ]
