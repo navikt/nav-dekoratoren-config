@@ -1,0 +1,22 @@
+{
+  "name": "nav-dekoratoren-config",
+  "version": "1.0.0",
+  "description": "Config for nav-dekoratøren",
+  "scripts": {
+    "validate-dev": "node -e \"require('./validate-configs.js').validateConfigs('dev')\"",
+    "validate-prod": "node -e \"require('./validate-configs.js').validateConfigs('prod')\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/navikt/nav-dekoratoren-config.git"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/navikt/nav-dekoratoren-config#readme",
+  "dependencies": {
+    "jsonschema": "1.4.1"
+  },
+  "devDependencies": {
+    "@types/node": "18.11.18",
+    "prettier": "2.8.3"
+  }
+}

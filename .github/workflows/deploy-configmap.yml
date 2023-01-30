@@ -17,12 +17,8 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v3
       - name: Validate Task Analytics config
-        uses: walbo/validate-json@v1.1.0
-        with:
-          files: configs/${{ inputs.env }}/ta-config.json
-          schema: schemas/ta-config.schema.json
-          fail-on-missing-schema: true
-          schema-version: draft-07
+        run: |
+          npm run validate-${{ inputs.env }}
       - name: Read json files
         run: |
           echo TA_CONFIG=$(cat ./configs/${{ inputs.env }}/ta-config.json | tr '\n' ' ') >> $GITHUB_ENV

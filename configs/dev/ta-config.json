@@ -51,14 +51,10 @@
       }
     ],
     "audience": ["privatperson", "samarbeidspartner"],
-    "language": ["nb", "nn"]
+    "language": ["nb", "ee"]
   },
   {
     "id": "1234",
-    "selection": 25,
-    "duration": {
-      "start": "asdf",
-      "end": "qwer"
-    }
+    "selection": 1000
   }
 ]
