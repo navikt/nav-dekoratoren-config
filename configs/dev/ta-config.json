@@ -22,7 +22,6 @@
   },
   {
     "id": "03237",
-    "selection": 25,
     "urls": [
       {
         "url": "https://www.dev.nav.no/",
@@ -51,10 +50,6 @@
       }
     ],
     "audience": ["privatperson", "samarbeidspartner"],
-    "language": ["nb", "ee"]
-  },
-  {
-    "id": "1234",
-    "selection": 1000
+    "language": ["nb", "nn"]
   }
 ]
