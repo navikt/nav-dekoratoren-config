@@ -25,7 +25,8 @@ type TaConfig = Array<{
   
   // (Valgfri) Tidsrom der undersøkelsen skal være tilgjengelig. Start/end må være strings
   // som JS kan parse til et Date-objekt, f.eks. "2023-12-24" eller "2024-01-01T12:00".
-  // Default er ingen tidsbegrensning
+  // Default er ingen tidsbegrensning. Bruker norsk tidssone. Start/end er exclusive med
+  // millisec presisjon
   duration?: {
     start?: string,
     end?: string,
@@ -114,8 +115,8 @@ type TaConfig = Array<{
 
 Undersøkelsen "12345" vises på alle sider under `https://www.nav.no/foo`, med unntak av sider under `https://www.nav.no/foo/bar`. <br/>
 Undersøkelsen "67890" vises på alle bokmål og nynorsk sider for privatpersoner, med unntak av forsiden. <br/>
-Undersøkelsen "31337" har 10% sannsynlighet for å vises på forsiden fra og med 1. jan 2023. <br/>
-Undersøkelsen "2357" vises på sider under nav.no/soknader i det oppgitte tidsrommet. <br/>
+Undersøkelsen "31337" har 10% sannsynlighet for å vises på forsiden fra 1/1/2023. <br/>
+Undersøkelsen "2357" vises på sider under nav.no/soknader fra 30/1/2023 kl 8:00, til 28/2/2023 kl 0:00. <br/>
 
 #### Utvalg av undersøkelser
 Det trekkes ut (opptil) en tilfeldig undersøkelse, basert på `selection`-verdien til undersøkelser som matcher for en side. Når en undersøkelse har vært med
