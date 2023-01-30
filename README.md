@@ -15,11 +15,11 @@ Endringene vil normalt være aktive i dekoratøren i løpet av ett minutt.
 En undersøkelse legges inn på dette formatet. Se også [JSON schema](https://github.com/navikt/nav-dekoratoren-config/blob/master/schemas/ta-config.schema.json).
 
 Obs: Undersøkelser vises aldri på sider som benytter simple header!
-```
-{
+```typescript
+type TaConfig = Array<{
   // (Påkrevd) Survey-id fra Task Analytics
   id: string
-  
+
   // (Valgfri) Prosentandel av besøkende som skal få undersøkelsen (0-100). Default er 100
   selection?: number
   
@@ -34,9 +34,12 @@ Obs: Undersøkelser vises aldri på sider som benytter simple header!
   // er satt, vises undersøkelsen på alle sider
   urls?: Array<
     {
-      url: string,    // Url (påkrevd)
-      match: "exact" | "startsWith",  // Logikk for sammenligning (påkrevd)
-      exclude: boolean    // Ekskluder denne url'en (valgfri, default er false)
+      // Url (påkrevd)
+      url: string,
+      // Logikk for sammenligning (påkrevd)
+      match: "exact" | "startsWith",
+      // Ekskluder denne url'en (valgfri, default er false)
+      exclude?: boolean
     }
   >
   
@@ -47,7 +50,7 @@ Obs: Undersøkelser vises aldri på sider som benytter simple header!
   // (Valgfri) Liste over språk undersøkelsen skal vises for. Hvis denne ikke er satt,
   // vises undersøkelsen for alle språk
   language?: Array<"nb" | "nn" | "en" | "se" | "uk" | "ru" | "pl">
-}
+}>
 ```
 
 #### Eksempel
