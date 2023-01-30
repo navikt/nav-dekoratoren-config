@@ -23,6 +23,13 @@ Obs: Undersøkelser vises aldri på sider som benytter simple header!
   // (Valgfri) Prosentandel av besøkende som skal få undersøkelsen (0-100). Default er 100
   selection?: number
   
+  // (Valgfri) Tidsrom der undersøkelsen skal være tilgjengelig. Start og/eller end må være
+  // strings som JS kan parse til et Date-objekt, f.eks. "2023-12-24" eller "2024-01-01T12:00"
+  duration?: {
+    start?: string,
+    end?: string,
+  }
+  
   // (Valgfri) Liste over url'er som undersøkelsen skal vises/ikke vises på. Hvis denne ikke
   // er satt, vises undersøkelsen på alle sider
   urls?: Array<
@@ -75,10 +82,26 @@ Obs: Undersøkelser vises aldri på sider som benytter simple header!
   {
     "id": "31337",
     "selection": 10,
+    "duration": {
+      "start": "2023-01-01"
+    },
     "urls": [
       {
         "url": "https://www.nav.no",
         "match": "exact"
+      }
+    ]
+  },
+  {
+    "id": "2357",
+    "duration": {
+      "start": "2023-01-30T08:00",
+      "end": "2023-02-28"
+    },
+    "urls": [
+      {
+        "url": "https://www.nav.no/soknader",
+        "match": "startsWith"
       }
     ]
   }
@@ -87,7 +110,8 @@ Obs: Undersøkelser vises aldri på sider som benytter simple header!
 
 Undersøkelsen "12345" vises på alle sider under `https://www.nav.no/foo`, med unntak av sider under `https://www.nav.no/foo/bar`. <br/>
 Undersøkelsen "67890" vises på alle bokmål og nynorsk sider for privatpersoner, med unntak av forsiden. <br/>
-Undersøkelsen "31337" har 10% sannsynlighet for å vises på forsiden. <br/>
+Undersøkelsen "31337" har 10% sannsynlighet for å vises på forsiden fra og med 1. jan 2023. <br/>
+Undersøkelsen "2357" vises på sider under nav.no/soknader i det oppgitte tidsrommet. <br/>
 
 #### Utvalg av undersøkelser
 Det trekkes ut (opptil) en tilfeldig undersøkelse, basert på `selection`-verdien til undersøkelser som matcher for en side. Når en undersøkelse har vært med
