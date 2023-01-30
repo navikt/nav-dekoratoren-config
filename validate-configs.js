@@ -16,27 +16,29 @@ const parseJsonFile = (filename) => {
     return JSON.parse(fs.readFileSync(filename, fileOptions));
   } catch (e) {
     console.error(`Failed to parse file ${filename} - ${e}`);
-    process.exitCode = 1;
+    return null;
   }
 };
 
 const validateJson = (filename, schema) => {
   const json = parseJsonFile(filename);
+  if (!json) {
+    process.exitCode = 1;
+    return;
+  }
 
   const { errors } = validator.validate(json, schema);
-
   if (errors.length === 0) {
     console.log(`File "${filename}" validated without errors`);
     return;
   }
 
-  process.exitCode = 1;
-
   console.error(`Validation errors in file "${filename}":`);
-
   errors.forEach((error) => {
     console.error(`${error.instance} in ${error.property} ${error.message}`);
   });
+
+  process.exitCode = 1;
 };
 
 const validateConfigs = (env) => {
