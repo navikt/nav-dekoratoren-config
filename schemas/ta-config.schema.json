@@ -18,6 +18,20 @@
         "minimum": 0,
         "maximum": 100
       },
+      "duration": {
+        "description": "Start/slutt tidspunkt for undersøkelsen",
+        "type": "object",
+        "properties": {
+          "start": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "end": {
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      },
       "urls": {
         "description": "Url'er som skal inkluderes eller ekskluderes",
         "type": "array",
