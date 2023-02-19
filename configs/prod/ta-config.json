@@ -34,6 +34,47 @@
     ]
   },
   {
+    "id": "03350",
+    "urls": [
+      {
+        "url": "https://www.nav.no/midlertidig-botilbud",
+        "match": "startsWith"
+      },
+      {
+        "url": "https://www.nav.no/ikke-bolig",
+        "match": "startsWith"
+      },
+      {
+        "url": "https://www.nav.no/ikke-penger",
+        "match": "startsWith"
+      },
+      {
+        "url": "https://www.nav.no/okonomi-gjeld",
+        "match": "startsWith"
+      },
+      {
+        "url": "https://www.nav.no/okonomisk-sosialhjelp",
+        "match": "startsWith"
+      },
+      {
+        "url": "https://www.nav.no/snakke-med-nav",
+        "match": "startsWith"
+      },
+      {
+        "url": "https://www.nav.no/sosiale-tjenester",
+        "match": "startsWith"
+      },
+      {
+        "url": "https://www.nav.no/opplysning-rad-veiledning",
+        "match": "startsWith"
+      },
+      {
+        "url": "https://www.nav.no/sosialhjelp/innsyn",
+        "match": "startsWith"
+      }
+    ]
+  },
+  {
     "id": "03348",
     "selection": 10,
     "duration":
