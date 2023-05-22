@@ -88,7 +88,7 @@
       {
         "url": "https://www.nav.no/",
         "match": "exact",
-        "exclusion": true
+        "exclude": true
       }
     ]
   }
