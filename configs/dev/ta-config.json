@@ -66,5 +66,13 @@
         "match": "startsWith"
       }
     ]
+  },{
+    "id": "03365",
+    "urls": [
+      {
+        "url": "https://www.ekstern.dev.nav.no/sosiale-tjenester",
+        "match": "exact"
+      }
+    ]
   }
 ]
