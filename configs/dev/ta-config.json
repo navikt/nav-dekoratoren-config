@@ -70,7 +70,7 @@
     "id": "03365",
     "urls": [
       {
-        "url": "https://www.ekstern.dev.nav.no/",
+        "url": "https://www.ekstern.dev.nav.no",
         "match": "startsWith"
       }
     ]
