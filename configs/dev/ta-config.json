@@ -70,8 +70,8 @@
     "id": "03365",
     "urls": [
       {
-        "url": "https://www.ekstern.dev.nav.no/sosiale-tjenester",
-        "match": "exact"
+        "url": "https://www.ekstern.dev.nav.no/",
+        "match": "startsWith"
       }
     ]
   }
