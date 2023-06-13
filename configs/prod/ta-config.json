@@ -71,12 +71,12 @@
     ]
   },
   {
-    "id": "03359",
+    "id": "03361",
     "selection": 20,
     "duration":
       {
-        "start": "2023-05-22T00:00",
-        "end": "2023-05-29T00:00"
+        "start": "2023-06-19T00:00",
+        "end": "2023-06-26T00:00"
       },
     "audience": ["privatperson"],
     "language": ["nb", "nn"],
