@@ -125,7 +125,7 @@
     "language": ["nb", "nn"],
     "urls": [
       {
-        "urls": "https://www.nav.no/",
+        "url": "https://www.nav.no/",
         "match": "exact",
         "exclude": true
       }
