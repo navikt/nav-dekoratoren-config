@@ -97,24 +97,6 @@
   },
   {
     "id": "03368",
-    "selection": 20,
-    "duration":
-      {
-        "start": "2023-08-07T00:00",
-        "end": "2023-08-14T00:00"
-      },
-    "audience": ["privatperson"],
-    "language": ["nb", "nn"],
-    "urls": [
-      {
-        "url": "https://www.nav.no/",
-        "match": "exact",
-        "exclude": true
-      }
-    ]
-  },
-  {
-    "id": "03368",
     "selection": 30,
     "duration":
       {
