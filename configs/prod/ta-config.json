@@ -64,6 +64,24 @@
     ]
   },
   {
+    "id": "03372",
+    "urls": [
+      {
+        "url": "https://arbeidsgiver.nav.no/samtalestotte",
+        "match": "startsWith"
+      },
+      {
+        "url": "https://www.nav.no/arbeidsgiver",
+        "match": "startsWith"
+      },
+      {
+        "url": "https://www.nav.no/arbeidsgiver",
+        "match": "exact",
+        "exclude": true
+      }
+    ]
+  },
+  {
     "id": "03350",
     "urls": [
       {
