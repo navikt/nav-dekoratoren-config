@@ -55,6 +55,15 @@
     ]
   },
   {
+    "id": "03357",
+    "urls": [
+      {
+        "url": "https://www.nav.no/sosialhjelp/innsyn/utbetaling",
+        "match": "startsWith"
+      }
+    ]
+  },
+  {
     "id": "03350",
     "urls": [
       {
