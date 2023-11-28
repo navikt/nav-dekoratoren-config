@@ -38,23 +38,6 @@
     ]
   },  
   {
-    "id": "03364",
-    "urls": [
-      {
-        "url": "https://www.nav.no/arbeidsgiver",
-        "match": "startsWith"
-      },
-      {
-        "url": "https://arbeidsgiver.nav.no",
-        "match": "startsWith"
-      },
-      {
-        "url": "https://www.nav.no/soknader/nb/bedrift",
-        "match": "startsWith"
-      }
-    ]
-  },
-  {
     "id": "03357",
     "urls": [
       {
