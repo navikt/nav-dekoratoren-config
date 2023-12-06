@@ -44,23 +44,23 @@
     "urls": [
     {
       "url": "https://www.nav.no/soknader",
-    "match": "startsWith"
+    "match": "exact"
     },
     {
       "url": "https://www.nav.no/ettersende",
-      "match": "startsWith"
+      "match": "exact"
     },
     {
       "url": "https://www.nav.no/klage",
-      "match": "startsWith"
+      "match": "exact"
     },
     {
       "url": "https://www.nav.no/arbeidsgiver/soknader",
-      "match": "startsWith"
+      "match": "exact"
     },
     {
       "url": "https://www.nav.no/arbeidsgiver/klage",
-      "match": "startsWith"
+      "match": "exact"
     },
     {
       "url": "https://www.nav.no/samarbeidspartner/soknader",
