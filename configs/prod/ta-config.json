@@ -36,6 +36,16 @@
         "url": "https://www.nav.no/arbeidsgiver",
         "match": "exact",
         "exclude": true
+      },
+      {
+        "url": "https://www.nav.no/arbeidsgiver/soknader",
+        "match": "exact",
+        "exclude": true
+      },
+      {
+        "url": "https://www.nav.no/arbeidsgiver/klage",
+        "match": "exact",
+        "exclude": true
       }
     ]
   },
