@@ -61,35 +61,6 @@
     "language": ["nb", "nn"]
   },
   {
-    "id": "03380",
-    "urls": [
-      {
-        "url": "https://www.nav.no/soknader",
-        "match": "exact"
-      },
-      {
-        "url": "https://www.nav.no/ettersende",
-        "match": "exact"
-      },
-      {
-        "url": "https://www.nav.no/klage",
-        "match": "exact"
-      },
-      {
-        "url": "https://www.nav.no/arbeidsgiver/soknader",
-        "match": "exact"
-      },
-      {
-        "url": "https://www.nav.no/arbeidsgiver/klage",
-        "match": "exact"
-      },
-      {
-        "url": "https://www.nav.no/samarbeidspartner/soknader",
-        "match": "startsWith"
-      }
-    ]
-  },
-  {
     "id": "03384",
     "urls": [
       {
