@@ -58,7 +58,14 @@
       "end": "2024-03-01T00:00"
     },
     "audience": ["privatperson"],
-    "language": ["nb", "nn"]
+    "language": ["nb", "nn"],
+    "urls": [
+      {
+        "url": "https://www.nav.no/",
+        "match": "exact",
+        "exclude": true
+      }
+    ]
   },
   {
     "id": "03384",
