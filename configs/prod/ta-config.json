@@ -55,7 +55,7 @@
     "duration":
     {
       "start": "2024-02-19T00:00",
-      "end": "2024-03-01T00"
+      "end": "2024-03-01T00:00"
     },
     "audience": ["privatperson"],
     "language": ["nb", "nn"]
