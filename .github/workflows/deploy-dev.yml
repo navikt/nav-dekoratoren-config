@@ -11,7 +11,8 @@ jobs:
   deploy:
     name: Deploy dev configmap
     uses: ./.github/workflows/deploy-configmap.yml
+    permissions:
+      contents: "read"
+      id-token: "write"
     with:
       env: dev
-    secrets:
-      NAIS_DEPLOY_APIKEY: ${{ secrets.NAIS_DEPLOY_APIKEY }}
