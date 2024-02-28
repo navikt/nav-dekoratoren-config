@@ -66,6 +66,15 @@
         "exclude": true
       }
     ]
+  },{
+    "id": "03385",
+    "selection": 50,
+    "urls": [
+      {
+        "url": "https://www.nav.no/sykepenger",
+        "match": "exact"
+      }
+    ]
   },
   {
     "id": "03384",
