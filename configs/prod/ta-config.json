@@ -48,19 +48,6 @@
         "exclude": true
       }
     ]
-  },
-  {
-    "id": "03381",
-    "selection": 30,
-    "audience": ["privatperson"],
-    "language": ["nb", "nn"],
-    "urls": [
-      {
-        "url": "https://www.nav.no/",
-        "match": "exact",
-        "exclude": true
-      }
-    ]
   },{
     "id": "03385",
     "selection": 90,
