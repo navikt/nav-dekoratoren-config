@@ -13,6 +13,10 @@
       {
         "url": "https://www.dev.nav.no/soknader/nb/bedrift",
         "match": "startsWith"
+      },
+      {
+        "url": "https://www.ekstern.dev.nav.no/arbeidsgiver/soknader",
+        "match": "startsWith"
       }
     ]
   },
