@@ -11,10 +11,6 @@
         "match": "startsWith"
       },
       {
-        "url": "https://arbeidsgiver.dev.nav.no",
-        "match": "startsWith"
-      },
-      {
         "url": "https://www.dev.nav.no/soknader/nb/bedrift",
         "match": "startsWith"
       }
