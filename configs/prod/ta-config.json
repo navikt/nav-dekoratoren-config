@@ -25,7 +25,7 @@
     "id": "03387",
     "urls": [
       {
-        "url": "https://arbeidsgiver.nav.no/samtalestotte",
+        "url": "https://arbeidsgiver.nav.no",
         "match": "startsWith"
       },
       {
