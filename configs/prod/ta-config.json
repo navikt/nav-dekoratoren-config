@@ -157,5 +157,19 @@
         "match": "startsWith"
       }
     ]
-  }
+  },
+  {"id": "03391",
+  "urls": [
+    {
+      "url": "https://www.nav.no/omstillingsstonad", 
+      "match": "startsWith"
+    }
+  ]},
+  {"id": "03392",
+  "urls": [
+    {
+      "url": "https://www.nav.no/barnepensjon", 
+      "match": "startsWith"
+    }
+  ]}
 ]
