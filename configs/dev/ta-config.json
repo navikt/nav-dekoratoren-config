@@ -71,7 +71,7 @@
     "id": "03400",
     "urls": [
       {
-        "url": "https://www.ansatt.dev.nav.no/aap",
+        "url": "https://www.dev.nav.no/aap",
         "match": "startsWith"
       }
     ]
