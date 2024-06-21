@@ -66,5 +66,14 @@
         "match": "startsWith"
       }
     ]
+  },
+  {
+    "id": "03400",
+    "urls": [
+      {
+        "url": "https://www.ansatt.dev.nav.no/aap?test=aap-worldcafe",
+        "match": "exact"
+      }
+    ]
   }
 ]
