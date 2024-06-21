@@ -72,7 +72,7 @@
     "urls": [
       {
         "url": "https://www.ansatt.dev.nav.no/aap",
-        "match": "exact"
+        "match": "startsWith"
       }
     ]
   }
