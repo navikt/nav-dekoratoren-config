@@ -1,21 +1,5 @@
 [
   {
-    "id": "03395",
-    "selection": 60,
-    "audience": ["privatperson"],
-    "language": ["nb", "nn"],
-    "duration": {
-      "start": "2024-05-13T06:00"
-    },
-    "urls": [
-      {
-        "url": "https://www.nav.no/",
-        "match": "exact",
-        "exclude": true
-      }
-    ]
-  },
-  {
     "id": "03343",
     "urls": [
       {
