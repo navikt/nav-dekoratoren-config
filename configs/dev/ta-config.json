@@ -72,7 +72,11 @@
     "urls": [
       {
         "url": "https://www.ansatt.dev.nav.no/aap?ta-preview",
-        "match": "startsWith"
+        "match": "exact"
+      },
+      {
+        "url": "https://aap-mine-aap.ekstern.dev.nav.no/aap/mine-aap/?ta-preview",
+        "match": "exact"
       }
     ]
   }
