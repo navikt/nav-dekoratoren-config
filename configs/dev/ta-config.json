@@ -5,7 +5,7 @@
     "selection": 97,
     "urls": [
       {
-        "url": "https://www.dev.nav.no/",
+        "url": "https://www.dev.nav.no/asdf",
         "match": "exact",
         "exclude": true
       },
