@@ -190,7 +190,67 @@
         "url": "https://www.nav.no/",
         "match": "exact",
         "exclude": true
+      },
+      {
+        "url": "https://www.nav.no/okonomisk-sosialhjelp",
+        "match": "exact",
+        "exclude": true
+      },
+      {
+        "url": "https://www.nav.no/alderspensjon",
+        "match": "exact",
+        "exclude": true
+      },
+      {
+        "url": "https://www.nav.no/dagpenger",
+        "match": "exact",
+        "exclude": true
+      },
+      {
+        "url": "https://www.nav.no/aap",
+        "match": "exact",
+        "exclude": true
+      },
+      {
+        "url": "https://www.nav.no/sykepenger",
+        "match": "exact",
+        "exclude": true
+      },
+      {
+        "url": "https://www.nav.no/midlertidig-botilbud",
+        "match": "exact",
+        "exclude": true
+      },
+      {
+        "url": "https://www.nav.no/rullestol-scooter/nn",
+        "match": "exact",
+        "exclude": true
+      },
+      {
+        "url": "https://www.nav.no/barnetilsyn-enslig",
+        "match": "exact",
+        "exclude": true
+      },
+      {
+        "url": "https://www.nav.no/tilleggsstonader",
+        "match": "exact",
+        "exclude": true
+      },
+      {
+        "url": "https://www.nav.no/rimelige-hjelpemidler",
+        "match": "exact",
+        "exclude": true
       }
     ]
   }
 ]
+
+
+
+
+
+
+
+
+
+
