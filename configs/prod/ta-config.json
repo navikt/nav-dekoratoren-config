@@ -187,6 +187,31 @@
     ]
   },
   {
+    "id": "03406",
+    "urls": [
+      {
+        "url": "https://www.nav.no/aap",
+        "match": "startsWith"
+      },
+      {
+        "url": "https://www.nav.no/no/person/arbeid/dagpenger-ved-arbeidsloshet-og-permittering/meldekort-hvordan-gjor-du-det/slik-fyller-du-ut-meldekortet-arbeidsavklaringspenger",
+        "match": "startsWith"
+      },
+      {
+        "url": "https://www.nav.no/aap/kalkulator",
+        "match": "startsWith"
+      },
+      {
+        "url": "https://www.nav.no/start/soknad-aap",
+        "match": "startsWith"
+      },
+      {
+        "url": "https://www.nav.no/aap/mine-aap/",
+        "match": "startsWith"
+      }
+    ]
+  },
+  {
     "id": "03404",
     "selection": 40,
     "audience": ["privatperson"],
