@@ -82,10 +82,19 @@
     ]
   },
   {
-    "id": "03393",
+    "id": "03405",
     "urls": [
       {
         "url": "https://www.nav.no/sykepenger",
+        "match": "exact"
+      }
+    ]
+  },
+  {
+    "id": "03407",
+    "urls": [
+      {
+        "url": "https://www.nav.no/soknader",
         "match": "exact"
       }
     ]
