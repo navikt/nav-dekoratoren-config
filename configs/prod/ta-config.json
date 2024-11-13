@@ -535,5 +535,20 @@
         "match": "startsWith"
       }
     ]
+  },{
+    "id": "03410",
+    "selection": 80,
+    "audience": ["privatperson"],
+    "language": ["nb", "nn"],
+    "duration": {
+      "start": "2024-11-18T00:00"
+    }, 
+    "urls": [
+      {
+        "url": "https://www.nav.no/",
+        "match": "exact",
+        "exclude": true
+      }
+    ]
   }
 ]
