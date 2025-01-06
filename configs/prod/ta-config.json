@@ -100,10 +100,14 @@
     ]
   },
   {
-    "id": "03374",
+    "id": "03414",
     "urls": [
       {
-        "url": "https://www.nav.no/pselv/publisering/dinpensjon.jsf",
+        "url": "https://www.nav.no/soknader#alderspensjon",
+        "match": "startsWith"
+      },
+      {
+        "url": "https://www.nav.no/pensjon/selvbetjening/dinpensjon",
         "match": "startsWith"
       },
       {
@@ -156,6 +160,14 @@
       },
       {
         "url": "https://www.nav.no/omsorgsopptjening-eldre",
+        "match": "startsWith"
+      },
+      {
+        "url": "https://www.nav.no/afp-offentlig-livsvarig",
+        "match": "startsWith"
+      },
+      {
+        "url": "https://www.nav.no/ufor-til-pensjon",
         "match": "startsWith"
       },
       {
