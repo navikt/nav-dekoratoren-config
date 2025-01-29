@@ -547,5 +547,21 @@
         "match": "startsWith"
       }
     ]
+  },
+  {
+    "id": "03416",
+    "selection": 80,
+    "audience": ["privatperson"],
+    "language": ["nb", "nn"],
+    "duration": {
+      "start": "2025-02-03T00:00"
+    }, 
+    "urls": [
+      {
+        "url": "https://www.nav.no/",
+        "match": "exact",
+        "exclude": true
+      }
+    ]
   }
 ]
