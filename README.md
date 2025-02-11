@@ -4,7 +4,7 @@
 Konfigurasjon for [nav-dekoratoren](https://github.com/navikt/nav-dekoratoren). Foreløpig brukes denne kun til oppsett av Task Analytics undersøkelser.
 
 ## Fremgangsmåte for endringer
-Endringer på config-filer valideres og deployes ved push til master. Sjekk [deploy actions](https://github.com/navikt/nav-dekoratoren-config/actions) for eventuelle valideringsfeil.
+Endringer på config-filer valideres og deployes ved push til main. Sjekk [deploy actions](https://github.com/navikt/nav-dekoratoren-config/actions) for eventuelle valideringsfeil.
 
 Endringer vil normalt være aktive i dekoratøren i løpet av ett minutt.
 
