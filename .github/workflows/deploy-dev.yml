@@ -12,7 +12,7 @@ jobs:
     name: Deploy dev configmap
     uses: ./.github/workflows/deploy-configmap.yml
     permissions:
-      contents: "read"
-      id-token: "write"
+      contents: read
+      id-token: write
     with:
       env: dev

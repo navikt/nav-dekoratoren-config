@@ -1,5 +1,4 @@
 # Config for dekoratøren
-![Deploy til prod](https://github.com/navikt/nav-dekoratoren-config/actions/workflows/deploy-prod.yml/badge.svg)  ![Deploy til dev](https://github.com/navikt/nav-dekoratoren-config/actions/workflows/deploy-dev.yml/badge.svg)
 
 Konfigurasjon for [nav-dekoratoren](https://github.com/navikt/nav-dekoratoren). Foreløpig brukes denne kun til oppsett av Task Analytics undersøkelser.
 
@@ -153,7 +152,16 @@ Dersom summen av selection-verdiene er >100, trekkes et tall mellom 0-(sum av ve
 ]
 ```
 Her er sannsynligheten 40% for "123" og 60% for "456", gitt at ingen av disse har vært med i en trekning for brukeren siste 30 dager.
- 
+
+## Deploy til dev-miljø
+
+Med workflow_dispatch trigger: <br>
+[Deploy to dev](https://github.com/navikt/nav-dekoratoren-config/actions/workflows/deploy-dev.yml) -> Run workflow -> Velg branch -> Run workflow
+
+## Prodsetting
+
+Lag en PR til main, og merge inn etter godkjenning (En automatisk release vil oppstå ved deploy til main)
+
 ## Henvendelser
 
 Spørsmål knyttet til prosjektet kan rettes mot https://github.com/orgs/navikt/teams/personbruker
