@@ -164,8 +164,8 @@ Lag en PR til main, og merge inn etter godkjenning (En automatisk release vil op
 
 ## Henvendelser
 
-Spørsmål knyttet til prosjektet kan rettes mot https://github.com/orgs/navikt/teams/personbruker
+Spørsmål knyttet til prosjektet kan rettes mot https://github.com/orgs/navikt/teams/navno
 
 ### For NAV-ansatte
 
-Interne henvendelser kan sendes via Slack i kanalen #team-personbruker
+Interne henvendelser kan sendes via Slack i kanalen #team-navno
