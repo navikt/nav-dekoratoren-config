@@ -231,5 +231,13 @@
         "match": "startsWith"
       }
     ]
+  },{
+    "id": "03425",
+    "urls": [
+      {
+        "url": "https://www.nav.no/familie/alene-med-barn/minside/",
+        "match": "exact"
+      }
+    ]
   }
 ]
