@@ -91,15 +91,6 @@
     ]
   },
   {
-    "id": "03424",
-    "urls": [
-      {
-        "url": "https://www.nav.no/minside",
-        "match": "exact"
-      }
-    ]
-  },
-  {
     "id": "03407",
     "urls": [
       {
@@ -236,6 +227,15 @@
     "urls": [
       {
         "url": "https://www.nav.no/pensjon/selvbetjening/dinpensjon",
+        "match": "exact"
+      }
+    ]
+  },
+  {
+    "id": "03424",
+    "urls": [
+      {
+        "url": "https://www.nav.no/minside",
         "match": "exact"
       }
     ]
