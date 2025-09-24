@@ -157,14 +157,5 @@
         "match": "exact"
       }
     ]
-  },
-  {
-    "id": "987654",
-    "urls": [
-      {
-        "url": "https://www.nav.no/testsituasjon",
-        "match": "exact"
-      }
-    ]
   }
 ]
