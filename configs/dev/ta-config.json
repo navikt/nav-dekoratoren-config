@@ -58,5 +58,14 @@
         "match": "exact"
       }
     ]
+  },
+  {
+    "id": "123456",
+    "urls": [
+      {
+        "url": "https://www.dev.nav.no/testsituasjon",
+        "match": "exact"
+      }
+    ]
   }
 ]
