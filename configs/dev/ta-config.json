@@ -60,10 +60,10 @@
     ]
   },
   {
-    "id": "12345678",
+    "id": "22222222",
     "urls": [
       {
-        "url": "https://www.dev.nav.no/testsituasjon",
+        "url": "https://www.ansatt.dev.nav.no/testsituasjon",
         "match": "exact"
       }
     ]
