@@ -16,7 +16,7 @@
     "jsonschema": "1.5.0"
   },
   "devDependencies": {
-    "@types/node": "22.18.10",
+    "@types/node": "22.19.1",
     "prettier": "3.6.2"
   }
 }
