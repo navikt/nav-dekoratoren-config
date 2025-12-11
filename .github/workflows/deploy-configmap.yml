@@ -24,7 +24,7 @@ jobs:
         run: |
           echo TA_CONFIG=$(cat ./configs/${{ inputs.env }}/ta-config.json | tr '\n' ' ') >> $GITHUB_ENV
       - name: Inject json into nais-config
-        uses: jacobtomlinson/gha-find-replace@v2
+        uses: jacobtomlinson/gha-find-replace@v3
         with:
           find: "{{TA_CONFIG}}"
           replace: ${{env.TA_CONFIG}}
