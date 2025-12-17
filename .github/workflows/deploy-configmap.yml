@@ -17,7 +17,7 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v6
       - name: Install validator
-        run: npm ci
+        run: npm ci --ignore-scripts
       - name: Validate Task Analytics config
         run: npm run validate-${{ inputs.env }}
       - name: Read json files
