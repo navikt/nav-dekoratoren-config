@@ -19,15 +19,15 @@ type TaConfig = Array<{
 
   // (Valgfri) Prosentandel av besøkende som skal få undersøkelsen (0-100). Default er 100
   selection?: number
-  
+
   // (Valgfri) Tidsrom der undersøkelsen skal kunne vises. Default er ingen tidsbegrensning.
   // Start/end må være date-time strings som kan parses av Javascript, og er exclusive med millisec presisjon.
-  // Benytter norsk tidssone. 
+  // Benytter norsk tidssone.
   duration?: {
     start?: string,
     end?: string,
   }
-  
+
   // (Valgfri) Liste over url'er som undersøkelsen skal kunne vises på, eller ekskluderes fra.
   // Som default vises undersøkelsen på alle sider. Dersom alle url'er har satt exclude=true,
   // vises undersøkelsen på alle sider unntatt disse.
@@ -41,11 +41,11 @@ type TaConfig = Array<{
       exclude?: boolean
     }
   >
-  
+
   // (Valgfri) Liste over målgrupper som undersøkelsen skal vises for.
   // Som default vises undersøkelsen for alle målgrupper.
   audience?: Array<"privatperson" | "arbeidsgiver" | "samarbeidspartner">
-  
+
   // (Valgfri) Liste over språk som undersøkelsen skal vises for.
   // Som default vises undersøkelsen for samtlige språk.
   language?: Array<"nb" | "nn" | "en" | "se" | "uk" | "ru" | "pl">
@@ -76,7 +76,7 @@ type TaConfig = Array<{
         "url": "https://www.nav.no",
         "match": "exact",
         "exclude": true
-      }      
+      }
     ],
     "audience": ["privatperson"],
     "language": ["nb", "nn"]
