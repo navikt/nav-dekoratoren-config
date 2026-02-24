@@ -1,0 +1,43 @@
+name: Validate and deploy configmap
+
+inputs:
+  env:
+    required: true
+    description: Environment name (for example dev or prod)
+
+runs:
+  using: composite
+  steps:
+    - name: Setup pnpm
+      uses: pnpm/action-setup@v4
+
+    - name: Install validator
+      shell: bash
+      run: pnpm install --frozen-lockfile
+
+    - name: Validate Task Analytics config
+      shell: bash
+      env:
+        ENVIRONMENT: ${{ inputs.env }}
+      run: pnpm run validate-$ENVIRONMENT
+
+    - name: Read json files
+      shell: bash
+      env:
+        ENVIRONMENT: ${{ inputs.env }}
+      run: |
+        TA_CONFIG="$(tr '\n' ' ' < "./configs/$ENVIRONMENT/ta-config.json")"
+        echo "TA_CONFIG=$TA_CONFIG" >> "$GITHUB_ENV"
+
+    - name: Inject json into nais-config
+      uses: jacobtomlinson/gha-find-replace@v3
+      with:
+        find: "{{TA_CONFIG}}"
+        replace: ${{ env.TA_CONFIG }}
+        include: ".nais/config.yml"
+
+    - name: Deploy to nais
+      uses: nais/deploy/actions/deploy@v2
+      env:
+        CLUSTER: ${{ inputs.env }}-gcp
+        RESOURCE: .nais/config.yml
