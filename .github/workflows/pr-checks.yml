@@ -10,11 +10,15 @@ jobs:
     steps:
       - name: Checkout repo
         uses: actions/checkout@v6
+
       - name: Setup pnpm
         uses: pnpm/action-setup@v4
+
       - name: Install validator
         run: pnpm install --frozen-lockfile
+
       - name: Validate dev config
         run: pnpm run validate-dev
+
       - name: Validate prod config
         run: pnpm run validate-prod

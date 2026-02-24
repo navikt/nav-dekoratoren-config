@@ -8,11 +8,16 @@ on:
       - configs/dev/**/*.json
 
 jobs:
-  deploy:
-    name: Deploy dev configmap
-    uses: ./.github/workflows/deploy-configmap.yml
+  build-and-deploy:
+    runs-on: ubuntu-latest
     permissions:
       contents: read
       id-token: write
-    with:
-      env: dev
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v6
+
+      - name: Build and deploy dev
+        uses: ./.github/actions/build-and-deploy
+        with:
+          env: dev
