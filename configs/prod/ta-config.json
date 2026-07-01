@@ -141,21 +141,5 @@
         "match": "startsWith"
       }
     ]
-  },{
-    "id": "03427",
-    "urls": [
-      {
-        "url": "https://www.nav.no/pensjon/selvbetjening/dinpensjon",
-        "match": "exact"
-      }
-    ]
-  },{
-    "id": "03428",
-    "urls": [
-      {
-        "url": "https://www.nav.no/familie/alene-med-barn/minside/",
-        "match": "exact"
-      }
-    ]
   }
 ]
